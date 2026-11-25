@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B90AA126-5930-4337-A643-141651472D04}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VaynaSocial</RootNamespace>
+    <AssemblyName>VaynaSocial</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony"><HintPath>C:\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\BepInEx\core\0Harmony.dll</HintPath></Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx"><HintPath>C:\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\BepInEx\core\BepInEx.dll</HintPath></Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-1.0.55.56.0b11">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\TextMeshPro-1.0.55.56.0b11.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\This Land Is My Land\This Land Is My Land_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptAnyCertificateHandler.cs" />
+    <Compile Include="CacheManager.cs" />
+    <Compile Include="CounterUploader.cs" />
+    <Compile Include="ChatEngine.cs" />
+    <Compile Include="MailEngine.cs" />
+    <Compile Include="ModConfig.cs" />
+    <Compile Include="Patch_FeaturesSocialControl_FillProfileInformation.cs" />
+    <Compile Include="Patch_FeaturesSocialControl_OnEnable.cs" />
+    <Compile Include="Patch_FeaturesSocialControl_SetupProfile.cs" />
+    <Compile Include="Patch_FeaturesSocialControl_Trading_UpdateData.cs" />
+    <Compile Include="Patch_ItemsDB_FindItemByPrefabName.cs" />
+    <Compile Include="Patch_LeaderboardTab_SetupSelectorAndCounters.cs" />
+    <Compile Include="Patch_LoadingScreen_InstantTravelAndRest.cs" />
+    <Compile Include="Patch_LocalizeManager_Localize.cs" />
+    <Compile Include="Patch_Mailbox_Compose_SendButton_Click.cs" />
+    <Compile Include="Patch_Mailbox_Compose_Update.cs" />
+    <Compile Include="Patch_MailSafeAttach.cs" />
+    <Compile Include="Patch_MainMenuHandler_Update.cs" />
+    <Compile Include="Patch_MegaChakaCertificateHandler.cs" />
+    <Compile Include="Patch_MegaChakaConnection_CallMethod.cs" />
+    <Compile Include="Patch_MegaChakaConnection_callMethodCoroutine.cs" />
+    <Compile Include="Patch_MegaChakaConnection_CheckHandlingComponent.cs" />
+    <Compile Include="Patch_NonSteamLoginFallback.cs" />
+    <Compile Include="Patch_PlayerActions_checkSaveAbility.cs" />
+    <Compile Include="Patch_SimpleChat_Awake.cs" />
+    <Compile Include="Patch_SimpleChat_ChatCanBeUsed.cs" />
+    <Compile Include="Patch_SimpleChat_SendChatMessage.cs" />
+    <Compile Include="Patch_SimpleChat_ShowChat.cs" />
+    <Compile Include="Patch_SimpleChat_Update.cs" />
+    <Compile Include="Patch_SocialBarterDescription_Initialize.cs" />
+    <Compile Include="Patch_SocialBarterInfo_Initialize.cs" />
+    <Compile Include="Patch_SocialEventCard_UpdateVisuals.cs" />
+    <Compile Include="Patch_SocialEventsManager_UpdateEvents.cs" />
+    <Compile Include="Patch_SocialEventsManager_GetHUDTrackerString.cs" />
+    <Compile Include="Patch_SocialEventsWindow_OnEnable.cs" />
+    <Compile Include="Patch_SocialEventsWindow_OnTurnInButtonClicked.cs" />
+    <Compile Include="Patch_SocialEvent_HasFailedCompletionEndTime.cs" />
+    <Compile Include="Patch_SocialEvent_IsActive.cs" />
+    <Compile Include="Patch_SocialEvent_IsActiveOrOnCooldown.cs" />
+    <Compile Include="Patch_SocialEvent_IsCompleted.cs" />
+    <Compile Include="Patch_SocialEvent_TurnIn.cs" />
+    <Compile Include="Patch_SocialManager_UpdateProfile.cs" />
+    <Compile Include="Patch_SocialWindow_OnEnable.cs" />
+    <Compile Include="Patch_SocialWindow_Update.cs" />
+    <Compile Include="Patch_TcpConnection_CallMethod.cs" />
+    <Compile Include="Patch_TcpConnection_CallMethodNoResponse.cs" />
+    <Compile Include="Patch_TcpConnection_Connect.cs" />
+    <Compile Include="Patch_TcpConnection_Connected.cs" />
+    <Compile Include="Patch_TcpConnection_ConnectionWatchdog.cs" />
+    <Compile Include="Patch_TcpConnection_Update.cs" />
+    <Compile Include="Patch_WarpaintDB_FindByPrefab.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VaynaChatWindow.cs" />
+    <Compile Include="VaynaModsWindow.cs" />
+    <Compile Include="VaynaSocialPlugin.cs" />
+    <Compile Include="RivalDataIntegrator.cs" />
+    <Compile Include="CorpseCleanupManager.cs" />
+    <Compile Include="LeaderboardEngine.cs" />
+    <Compile Include="Patch_WorldState_CorpseGuard.cs" />
+    <Compile Include="Patch_LeaderboardView_SetElementVisuals.cs" />
+    <Compile Include="Patch_SimpleChat_Channel_AddMessage.cs" />
+    <Compile Include="TradingEngine.cs" />
+    <Compile Include="Patch_SocialBarterInfo_RefreshPlacedItems.cs" />
+    <Compile Include="Patch_SocialBarterDescription_RefreshPlacedItems.cs" />
+    <Compile Include="Patch_Social_IsInOutpostOrGroup.cs" />
+    <Compile Include="Patch_ItemExchangeDialogBox_CampInventoryFix.cs" />
+    <Compile Include="Patch_SandboxFlow_NameSelection.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
